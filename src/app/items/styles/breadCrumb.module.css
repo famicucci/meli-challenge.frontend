@@ -1,0 +1,20 @@
+.container {
+    margin-top: calc(var(--base-spacing) * 2);
+    margin-bottom: calc(var(--base-spacing) * 2);
+}
+
+.categorie {
+    color: #000000;
+    font-size: 14px;
+    display: inline;
+    margin-right: var(--base-spacing);
+}
+
+.categorie:not(:last-child)::after {
+    content: '>';
+    margin-left: var(--base-spacing);
+}
+
+.categorie:hover {
+    text-decoration: underline;
+}
