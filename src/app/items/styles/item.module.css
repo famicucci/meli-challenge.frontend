@@ -12,10 +12,8 @@
 .grid {
     display: grid;
     grid-template-columns: 25% 60% 15%;
-    margin: 0 auto;
     padding: var(--base-spacing);
     width: 100%;
-    max-width: 900px;
 }
 
 .info {

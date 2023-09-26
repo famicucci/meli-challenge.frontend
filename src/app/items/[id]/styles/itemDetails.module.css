@@ -1,8 +1,6 @@
 .card {
-    margin: 0 auto;
     padding: var(--base-spacing);
     width: 100%;
-    max-width: 900px;
     background-color: var(--white-color);
     padding: calc(var(--base-spacing) * 4);
 }
