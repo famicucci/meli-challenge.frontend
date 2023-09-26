@@ -4,7 +4,7 @@ import styles from "../styles/item.module.css";
 
 export default function Item({ item }: { item: Item }) {
   return (
-    <div className={styles.grid}>
+    <div className={`${styles.card} ${styles.grid}`}>
       <Image
         src={item.picture}
         alt="Picture of the author"

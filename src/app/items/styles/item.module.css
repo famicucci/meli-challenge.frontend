@@ -1,3 +1,14 @@
+.card {
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+}
+
 .grid {
     display: grid;
     grid-template-columns: 25% 60% 15%;
