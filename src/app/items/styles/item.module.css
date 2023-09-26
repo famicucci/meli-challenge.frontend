@@ -1,0 +1,33 @@
+.grid {
+    display: grid;
+    grid-template-columns: 25% 60% 15%;
+    margin: 0 auto;
+    padding: var(--base-spacing);
+    width: 100%;
+    max-width: 900px;
+}
+
+.info {
+    margin-top: calc(var(--base-spacing)*2);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.amount {
+    margin-left: var(--base-spacing);
+}
+
+.title {
+    margin-top: calc(var(--base-spacing)*2);
+}
+
+.condition {
+    margin-top: calc(var(--base-spacing)*2);
+}
