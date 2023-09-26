@@ -1,18 +1,33 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function FormSearch() {
+  const [value, setValue] = useState("");
+  const searchParams = useSearchParams();
   const router = useRouter();
+
+  useEffect(() => {
+    setValue(searchParams.get("search") || "");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const query = `items?search=${e.target[0].value}`;
+    const query = `items?search=${value}`;
     router.push(`${query}`);
   };
 
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" placeholder="Search..." />
+      <input
+        type="text"
+        placeholder="Nunca dejes de buscar"
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
+      />
       <button>Search</button>
     </form>
   );
