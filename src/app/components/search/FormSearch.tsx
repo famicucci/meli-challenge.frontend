@@ -9,12 +9,11 @@ export default function FormSearch() {
 
   useEffect(() => {
     setValue(searchParams.get("search") || "");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [searchParams]);
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const query = `items?search=${value}`;
+    const query = `/items?search=${value}`;
     router.push(`${query}`);
   };
 
