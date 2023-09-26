@@ -1,27 +1,9 @@
-"use client";
-import { useEffect, useState } from "react";
-import { getItems } from "./services";
-import { useSearchParams } from "next/navigation";
+// import { useSearchParams } from "next/navigation";
+import ListItems from "./components/ListItems";
+import { ItemsProps } from "./models";
 
-export default function Items() {
-  const [data, setData] = useState();
-  const [loading, setLoading] = useState(true);
-  const searchParams = useSearchParams();
-  const textSearch = searchParams.get("search");
+export default function Items(props: ItemsProps) {
+  const { searchParams } = props;
 
-  useEffect(() => {
-    setLoading(true);
-    (async () => {
-      try {
-        const data = await getItems(textSearch);
-        setData(data.items);
-        setLoading(false);
-      } catch (error) {
-        console.log(error);
-        setLoading(false);
-      }
-    })();
-  }, [textSearch]);
-
-  return <div>{loading ? <p>Loading...</p> : JSON.stringify(data)}</div>;
+  return <ListItems textSearch={searchParams.search} />;
 }
