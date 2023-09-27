@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.input {
+    width: 800px;
+    border: none;
+    outline: none;
+    height: 30px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    padding-left: var(--base-spacing);
+}
+
+.button {
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
