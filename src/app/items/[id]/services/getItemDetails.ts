@@ -1,6 +1,12 @@
 async function getItemDetails(id: string) {
     const res = await fetch(
-        `http://localhost:4000/api/items/${id}`
+        `http://localhost:4000/api/items/${id}`,
+        {
+            method: 'GET',
+            headers: {
+                'user-signature': 'FRANCISCO-MICUCCI',
+            },
+        }
     );
 
     if (!res.ok) {
