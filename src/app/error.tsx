@@ -19,7 +19,7 @@ export default function Error({
     <div className={styles.container}>
       <h2>Ocurrió un error!</h2>
       <p>{error.message}</p>
-      <button onClick={() => route.push("/")}>Try again</button>
+      <button onClick={() => route.push("/")}>Volver</button>
     </div>
   );
 }
