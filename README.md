@@ -2,7 +2,7 @@
 
 1) git clone <url>
 2) npm install
-3) npm run dev
+3) npm run dev (en back --> npm run start)
 
 ## App
 La carpeta app contiene toda la estructura de la aplicación.
