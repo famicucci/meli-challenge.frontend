@@ -1,29 +1,25 @@
 "use client"; // Error components must be Client Components
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import styles from "./styles/error.module.css";
 
 export default function Error({
   error,
-  reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const route = useRouter();
+
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Ocurrió un error!</h2>
       <p>{error.message}</p>
-      <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-      >
-        Try again
-      </button>
+      <button onClick={() => route.push("/")}>Try again</button>
     </div>
   );
 }

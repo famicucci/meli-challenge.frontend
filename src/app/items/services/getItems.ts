@@ -4,7 +4,7 @@ async function getItems(search: string | null) {
     );
 
     if (!res.ok) {
-        throw Error("Hubo un error al traer los usuarios");
+        throw Error('Hubo un error al cargar los items');
     }
 
     return res.json();

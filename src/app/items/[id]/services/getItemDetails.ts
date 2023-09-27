@@ -4,7 +4,7 @@ async function getItemDetails(id: string) {
     );
 
     if (!res.ok) {
-        throw Error("Hubo un error al traer los usuarios");
+        throw Error("Hubo un error al cargar el item");
     }
 
     return res.json();
