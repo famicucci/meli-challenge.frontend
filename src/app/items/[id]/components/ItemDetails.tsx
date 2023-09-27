@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/itemDetails.module.css";
 import { ItemDetailsProps } from "../models/ItemDetailsProps";
-import { CONDITION_ITEM } from "../../utils";
+import { CONDITION_ITEM, CURRENCY } from "../../utils";
 
 export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
   return (
@@ -16,7 +16,7 @@ export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
           </p>
           <p className={styles.title}>{item.title}</p>
           <p className={styles.price}>
-            {item.price.currency}{" "}
+            {CURRENCY[item.price.currency.toLowerCase()]}{" "}
             {new Intl.NumberFormat("de-De", {
               style: "decimal",
               minimumFractionDigits: 2,

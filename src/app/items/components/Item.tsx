@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Item } from "../models/Item";
 import styles from "../styles/item.module.css";
 import { useRouter } from "next/navigation";
-import { CONDITION_ITEM } from "../utils";
+import { CONDITION_ITEM, CURRENCY } from "../utils";
 
 export default function Item({ item }: { item: Item }) {
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function Item({ item }: { item: Item }) {
       />
       <div className={styles.info}>
         <div className={styles.price}>
-          <p>{item.price.currency}</p>
+          <p>{CURRENCY[item.price.currency.toLowerCase()]}</p>
           <p className={styles.amount}>
             {new Intl.NumberFormat("de-De").format(item.price.amount)}
           </p>
