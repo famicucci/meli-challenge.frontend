@@ -6,12 +6,9 @@ export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
   return (
     <div className={styles.card}>
       <div className={styles.container}>
-        <Image
-          src={item.picture}
-          alt="Picture of the author"
-          width={500}
-          height={500}
-        />
+        <div className={styles.imageContainer}>
+          <Image src={item.picture} alt={item.title} width={500} height={500} />
+        </div>
         <div>
           <p>
             {item.condition} - {item.sold_quantity} vendidos
