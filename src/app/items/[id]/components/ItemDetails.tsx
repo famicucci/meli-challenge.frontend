@@ -15,7 +15,12 @@ export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
           </p>
           <p className={styles.title}>{item.title}</p>
           <p className={styles.price}>
-            {item.price.currency} {item.price.amount}
+            {item.price.currency}{" "}
+            {new Intl.NumberFormat("de-De", {
+              style: "decimal",
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            }).format(item.price.amount)}
           </p>
           <button className={styles.button}>Comprar</button>
         </div>
