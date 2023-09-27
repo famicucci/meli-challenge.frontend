@@ -12,7 +12,7 @@ export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
         </div>
         <div>
           <p>
-            {CONDITION_ITEM[item.condition]} - {item.sold_quantity} vendidos
+            {CONDITION_ITEM[item.condition]} - {item.soldQuantity} vendidos
           </p>
           <p className={styles.title}>{item.title}</p>
           <p className={styles.price}>

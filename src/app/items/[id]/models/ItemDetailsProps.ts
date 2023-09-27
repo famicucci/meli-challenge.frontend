@@ -2,7 +2,7 @@ export interface ItemDetailsProps {
     id: string;
     picture: string;
     description: string;
-    sold_quantity: number;
+    soldQuantity: number;
     title: string;
     condition: string;
     price: {
