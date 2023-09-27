@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Item } from "../models/Item";
 import styles from "../styles/item.module.css";
 import { useRouter } from "next/navigation";
+import { CONDITION_ITEM } from "../utils";
 
 export default function Item({ item }: { item: Item }) {
   const router = useRouter();
@@ -29,7 +30,7 @@ export default function Item({ item }: { item: Item }) {
         </div>
         <p className={styles.title}>{item.title}</p>
       </div>
-      <p className={styles.condition}>{item.condition}</p>
+      <p className={styles.condition}>{CONDITION_ITEM[item.condition]}</p>
     </div>
   );
 }

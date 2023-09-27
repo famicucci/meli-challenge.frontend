@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/itemDetails.module.css";
 import { ItemDetailsProps } from "../models/ItemDetailsProps";
+import { CONDITION_ITEM } from "../../utils";
 
 export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
   return (
@@ -11,7 +12,7 @@ export default function ItemDetails({ item }: { item: ItemDetailsProps }) {
         </div>
         <div>
           <p>
-            {item.condition} - {item.sold_quantity} vendidos
+            {CONDITION_ITEM[item.condition]} - {item.sold_quantity} vendidos
           </p>
           <p className={styles.title}>{item.title}</p>
           <p className={styles.price}>
