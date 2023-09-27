@@ -23,7 +23,7 @@ export default function Item({ item }: { item: Item }) {
       <div className={styles.info}>
         <div className={styles.price}>
           <p>{item.price.currency}</p>
-          <p className={styles.amount}>{item.price.amount}</p>
+          <p className={styles.amount}>{item.price.amount.toLocaleString()}</p>
         </div>
         <p className={styles.title}>{item.title}</p>
       </div>
