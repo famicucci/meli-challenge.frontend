@@ -23,7 +23,9 @@ export default function Item({ item }: { item: Item }) {
       <div className={styles.info}>
         <div className={styles.price}>
           <p>{item.price.currency}</p>
-          <p className={styles.amount}>{item.price.amount.toLocaleString()}</p>
+          <p className={styles.amount}>
+            {new Intl.NumberFormat("de-De").format(item.price.amount)}
+          </p>
         </div>
         <p className={styles.title}>{item.title}</p>
       </div>
